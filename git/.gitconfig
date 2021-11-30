@@ -1,0 +1,7 @@
+[user]
+	name = Émilia Decaudin
+	email = me@edecaud.in
+[credential]
+	helper = "!f() { if command -v osxkeychain; then osxkeychain $@; fi; }; f"
+[init]
+	defaultBranch = main
