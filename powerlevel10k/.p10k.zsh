@@ -373,7 +373,9 @@
     typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
     typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
 
-    typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_SUFFIX=' via ssh'
+    typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION=' '
+    typeset -g POWERLEVEL9K_CONTEXT_ROOT_VISUAL_IDENTIFIER_EXPANSION=''
+    typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_VISUAL_IDENTIFIER_EXPANSION=' '
 
     ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
 
