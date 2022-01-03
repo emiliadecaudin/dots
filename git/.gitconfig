@@ -4,4 +4,4 @@
 [init]
 	defaultBranch = main
 [core]
-	excludesfile = /Users/emiliadecaudin/dots/git/.gitignore
+	excludesfile = ~/dots/git/.gitignore
