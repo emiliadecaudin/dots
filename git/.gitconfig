@@ -4,4 +4,4 @@
 [init]
 	defaultBranch = main
 [core]
-	excludesfile = ~/dots/git/.gitignore
+	excludesfile = ~/.config/git/.gitignore
