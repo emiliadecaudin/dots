@@ -1,0 +1,5 @@
+# ZSH
+
+.zcompdump*
+.zsh_history
+.iterm2_shell_integration.zsh
