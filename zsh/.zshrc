@@ -2,9 +2,17 @@
 
 safe_source ${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh
 
+# alises
+
+alias ffprobe='ffprobe -hide_banner'
+
 # Host Specific RCs
 
 safe_source ${CONFIG}/zsh/hosts/$(hostname -s).zshrc
+
+# iTerm2 Integration
+
+safe_source ${CONFIG}/iterm2/.iterm2_shell_integration.zsh
 
 # oh-my-zsh
 
@@ -17,7 +25,3 @@ safe_source $ZSH/oh-my-zsh.sh
 # Powerlevel10k
 
 safe_source ${HOME}/.p10k.zsh
-
-# iTerm2 Integration
-
-safe_source ${CONFIG}/iterm2/.iterm2_shell_integration.zsh
