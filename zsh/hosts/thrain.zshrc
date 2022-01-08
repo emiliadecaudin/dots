@@ -11,3 +11,7 @@ function fix_node() {
 # iTerm2 Integration
 
 export iterm2_hostname=data.edecaud.in
+
+# Neofetch
+
+echo && neofetch
