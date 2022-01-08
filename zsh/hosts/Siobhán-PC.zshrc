@@ -8,8 +8,8 @@ eval $(dircolors -b ~/.dircolors)
 
 # Neofetch
 
-neofetch
+echo & neofetch
 
-# oh-my-zsh
+# Oh My Zsh
 
 plugins+=(archlinux)

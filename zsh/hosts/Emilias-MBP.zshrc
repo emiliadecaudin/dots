@@ -1,4 +1,4 @@
-# aliases
+# Aliases
 
 alias cal='task calendar'
 
@@ -6,7 +6,6 @@ alias cal='task calendar'
 
 [[ -v SHOW_NEOFETCH ]] && neofetch ; unset SHOW_NEOFETCH
 
-# oh-my-zsh
+# Oh My Zsh
 
 plugins+=(asdf direnv macos poetry rust)
-

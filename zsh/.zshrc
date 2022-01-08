@@ -2,7 +2,7 @@
 
 safe_source ${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh
 
-# alises
+# Aliases
 
 alias ffprobe='ffprobe -hide_banner'
 
@@ -14,7 +14,7 @@ safe_source ${CONFIG}/zsh/hosts/$(hostname -s).zshrc
 
 safe_source ${CONFIG}/iterm2/.iterm2_shell_integration.zsh
 
-# oh-my-zsh
+# Oh My Zsh
 
 export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"

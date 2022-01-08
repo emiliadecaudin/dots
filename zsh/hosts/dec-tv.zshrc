@@ -4,8 +4,8 @@ export iterm2_hostname=decaudin.us
 
 # Neofetch
 
-neofetch
+echo & neofetch
 
-# oh-my-zsh
+# Oh My Zsh
 
 plugins+=(macos)
