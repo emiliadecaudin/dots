@@ -4,7 +4,7 @@ export iterm2_hostname=decaudin.us
 
 # Neofetch
 
-echo & neofetch
+echo && neofetch
 
 # Oh My Zsh
 

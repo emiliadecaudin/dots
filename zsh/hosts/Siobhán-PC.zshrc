@@ -8,7 +8,7 @@ eval $(dircolors -b ~/.dircolors)
 
 # Neofetch
 
-echo & neofetch
+echo && neofetch
 
 # Oh My Zsh
 
