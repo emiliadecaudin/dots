@@ -2,4 +2,6 @@
 
 .zcompdump*
 .zsh_history
-.iterm2_shell_integration.zsh
+iterm2_shell_integration.zsh
+host.zprofile
+host.zshrc
