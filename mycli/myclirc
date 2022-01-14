@@ -1,0 +1,13 @@
+[main]
+smart_completion = True
+destructive_warning = True
+log_file = "~/.cache/mycli.log"
+log_level = INFO
+timing = True
+key_bindings = emacs
+wider_completion_menu = False
+prompt = '\t \u@\h:\d> '
+prompt_continuation = '->'
+less_chatty = True
+keyword_casing = auto
+enable_pager = True

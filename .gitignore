@@ -1,7 +1,8 @@
-# ZSH
+# MySQL
 
-.zcompdump*
-.zsh_history
-iterm2_shell_integration.zsh
+mylogin.cnf
+
+# zsh
+
 host.zprofile
 host.zshrc
