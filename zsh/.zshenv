@@ -1,17 +1,12 @@
 # Environment
 
-export XDG_CONFIG_HOME=${HOME}/.config
-export LOCAL_CONFIG=${XDG_CONFIG_HOME}
-
+export LOCAL_CONFIG=${HOME}/.local/etc
 export LOCAL_BIN=${HOME}/.local/bin
 export LOCAL_LIB=${HOME}/.local/lib
 export LOCAL_SOFTWARE=${HOME}/.local/opt
-export XDG_DATA_HOME=${HOME}/.local/share
-export LOCAL_DATA=${XDG_DATA_HOME}
-export LOCAL_HISTORY=${LOCAL_DATA}/history
-
-export XDG_CACHE_HOME=${LOCAL_CACHE}
-export LOCAL_CACHE=${HOME}/.cache
+export LOCAL_DATA=${HOME}/.local/share
+export LOCAL_HISTORY=${HOME}/.local/var/history
+export LOCAL_CACHE=${HOME}/.local/var/cache
 
 mkdir -p ${LOCAL_CONFIG}
 mkdir -p ${LOCAL_BIN}
@@ -21,6 +16,9 @@ mkdir -p ${LOCAL_DATA}
 mkdir -p ${LOCAL_HISTORY}
 mkdir -p ${LOCAL_CACHE}
 
+export XDG_CONFIG_HOME=${LOCAL_CONFIG}
+export XDG_DATA_HOME=${LOCAL_DATA}
+export XDG_CACHE_HOME=${LOCAL_CACHE}
 # asdf
 
 [[ ! -v ASDF_DIR ]] && export ASDF_DIR=${LOCAL_SOFTWARE}/asdf || true
@@ -29,12 +27,12 @@ export ASDF_CONFIG_FILE=${LOCAL_CONFIG}/asdf/asdfrc
 
 # mycli
 
-export MYCLI_HISTFILE=${LOCAL_HISTORY}/mycli_history
+export MYCLI_HISTFILE=${LOCAL_HISTORY}/mycli.history
 
 # MySQL
 
 export MYSQL_TEST_LOGIN_FILE=${LOCAL_CONFIG}/mysql/mylogin.cnf
-export MYSQL_HISTFILE=${LOCAL_HISTORY}/mysql_history
+export MYSQL_HISTFILE=${LOCAL_HISTORY}/mysql.history
 
 # Oh My ZSH
 
@@ -44,17 +42,16 @@ export ZSH_CUSTOM=${LOCAL_DATA}/oh-my-zsh
 # Python
 
 export PYTHONSTARTUP=${LOCAL_CONFIG}/python/pythonrc.py
-export PYTHONHISTORY=${LOCAL_HISTORY}/python_history
+export PYTHONHISTORY=${LOCAL_HISTORY}/python.history
 
 # Taskwarrior
 
 export TASKRC=${LOCAL_CONFIG}/taskwarrior/taskrc
-export TASKDATA=${LOCAL_DATA}/taskwarrior
 
 # zsh
 
 export ZDOTDIR=${LOCAL_CONFIG}/zsh
-export HISTFILE=${LOCAL_HISTORY}/zsh_history
+export HISTFILE=${LOCAL_HISTORY}/zsh.history
 export ZHISTFILE=${HISTFILE}
 export ZSH_COMPDUMP=${LOCAL_CACHE}/zcompdump
 
