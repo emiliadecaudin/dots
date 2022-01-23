@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+echo "Pulling from upstream dots repository..."
+git -C ${HOME}/.local/dots pull
+
+echo "Restarting zsh.."
+
+exec zsh -l
