@@ -5,7 +5,10 @@ export LOCAL_BIN=${HOME}/.local/bin
 export LOCAL_LIB=${HOME}/.local/lib
 export LOCAL_SOFTWARE=${HOME}/.local/opt
 export LOCAL_DATA=${HOME}/.local/share
+export LOCAL_MAN=${HOME}/.local/share/man
+export LOCAL_INFO=${HOME}/.local/share/info
 export LOCAL_HISTORY=${HOME}/.local/var/history
+export LOCAL_LOGS=${HOME}/.local/var/logs
 export LOCAL_CACHE=${HOME}/.local/var/cache
 
 mkdir -p ${LOCAL_CONFIG}
@@ -13,7 +16,10 @@ mkdir -p ${LOCAL_BIN}
 mkdir -p ${LOCAL_LIB}
 mkdir -p ${LOCAL_SOFTWARE}
 mkdir -p ${LOCAL_DATA}
+mkdir -p ${LOCAL_MAN}
+mkdir -p ${LOCAL_INFO}
 mkdir -p ${LOCAL_HISTORY}
+mkdir -p ${LOCAL_LOGS}
 mkdir -p ${LOCAL_CACHE}
 
 export XDG_CONFIG_HOME=${LOCAL_CONFIG}
@@ -43,6 +49,10 @@ export ZSH_CUSTOM=${LOCAL_DATA}/oh-my-zsh
 
 export PYTHONSTARTUP=${LOCAL_CONFIG}/python/pythonrc.py
 export PYTHONHISTORY=${LOCAL_HISTORY}/python.history
+
+# Rust
+
+export CARGO_INSTALL_ROOT=${HOME}/.local
 
 # Taskwarrior
 
