@@ -11,5 +11,5 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 path=(${LOCAL_BIN} $path)
 path=(${HOME}/.local/dots/bin $path)
-manpath=(${LOCAL_MAN} $manpath)
-export INFOPATH="${LOCAL_INFO}:${INFOPATH:-}"
+manpath+=(${LOCAL_MAN})
+export INFOPATH="${INFOPATH:-}:${LOCAL_INFO}"

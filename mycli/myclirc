@@ -1,7 +1,7 @@
 [main]
 smart_completion = True
 destructive_warning = True
-log_file = "~/.cache/mycli.log"
+log_file = "~/.local/var/logs/mycli.log"
 log_level = INFO
 timing = True
 key_bindings = emacs
