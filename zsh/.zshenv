@@ -60,10 +60,6 @@ export PYTHONHISTORY=${LOCAL_HISTORY}/python.history
 
 export CARGO_INSTALL_ROOT=${HOME}/.local
 
-# Taskwarrior
-
-export TASKRC=${LOCAL_CONFIG}/taskwarrior/taskrc
-
 # zsh
 
 export ZDOTDIR=${LOCAL_CONFIG}/zsh
