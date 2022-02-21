@@ -50,6 +50,7 @@ export MYSQL_HISTFILE=${LOCAL_HISTORY}/mysql.history
 
 export ZSH=${LOCAL_SOFTWARE}/oh-my-zsh
 export ZSH_CUSTOM=${LOCAL_DATA}/oh-my-zsh
+export ZSH_CACHE_DIR=${LOCAL_CACHE}/oh-my-zsh
 
 # Python
 
