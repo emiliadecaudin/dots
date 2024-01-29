@@ -33,6 +33,11 @@ export XDG_CACHE_HOME=${LOCAL_CACHE}
 export ASDF_DATA_DIR=${LOCAL_DATA}/asdf
 export ASDF_CONFIG_FILE=${LOCAL_CONFIG}/asdf/asdfrc
 
+# awscli
+
+export AWS_CONFIG_FILE=${LOCAL_CONFIG}/aws/config
+export AWS_SHARED_CREDENTIALS_FILE=${LOCAL_CONFIG}/aws/credentials
+
 # less
 
 export LESSHISTFILE=${LOCAL_HISTORY}/less.history

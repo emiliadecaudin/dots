@@ -8,12 +8,12 @@ safe_source ${LOCAL_CONFIG}/zsh/host.zshrc
 
 # iTerm2 Integration
 
-safe_source ${LOCAL_SOFTWARE}/iterm2/iterm2_shell_integration.zsh
+zstyle :omz:plugins:iterm2 shell-integration yes
 
 # Oh My Zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins+=(colored-man-pages zsh-syntax-highlighting)
+plugins+=(colored-man-pages iterm2 zsh-syntax-highlighting)
 ZSH_DISABLE_COMPFIX=true
 safe_source ${ZSH}/oh-my-zsh.sh
 

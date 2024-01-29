@@ -10,3 +10,5 @@ mylogin.cnf
 
 host.zprofile
 host.zshrc
+.zsh_history
+.zsh_sessions/
