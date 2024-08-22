@@ -8,6 +8,7 @@
 
 # direnv
 
+.direnv/
 .envrc
 
 # VSCode
