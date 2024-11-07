@@ -26,6 +26,19 @@ safe_source ${LOCAL_CONFIG}/powerlevel10k/p10k.zsh
 export HISTFILE=${ZHISTFILE}
 unset ZHISTFILE
 
+# VSCode Detection & GIT_EDITOR
+
+export IS_VSCODE=false
+export GIT_EDITOR=nano
+
+if [[ $(printenv | grep -c "VSCODE_") -gt 0 ]]; then
+    export IS_VSCODE=true
+fi
+
+if $IS_VSCODE; then
+    export GIT_EDITOR="code --wait"
+fi
+
 # Aliases
 
 safe_alias bat cat="bat --paging=never"

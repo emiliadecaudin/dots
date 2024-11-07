@@ -2,8 +2,6 @@
 	name = Émilia Decaudin
 [init]
 	defaultBranch = main
-[core]
-	editor = code --wait
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
