@@ -29,7 +29,6 @@ export XDG_CACHE_HOME=${LOCAL_CACHE}
 
 # asdf
 
-[[ ! -v ASDF_DIR ]] && export ASDF_DIR=${LOCAL_SOFTWARE}/asdf || true
 export ASDF_DATA_DIR=${LOCAL_DATA}/asdf
 export ASDF_CONFIG_FILE=${LOCAL_CONFIG}/asdf/asdfrc
 

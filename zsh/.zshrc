@@ -39,6 +39,11 @@ if $IS_VSCODE; then
     export GIT_EDITOR="code --wait"
 fi
 
+# Reload Completions
+
+autoload -Uz compinit
+compinit
+
 # Aliases
 
 safe_alias bat cat="bat --paging=never"
