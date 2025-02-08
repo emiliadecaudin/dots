@@ -11,6 +11,5 @@ export HOMEBREW_BAT=1
 
 path=(${LOCAL_BIN} $path)
 path=(${HOME}/.local/dots/bin $path)
-path=(${ASDF_DATA_DIR}/shims $path)
 manpath+=(${LOCAL_MAN})
 export INFOPATH="${INFOPATH:-}:${LOCAL_INFO}"
