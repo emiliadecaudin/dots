@@ -56,6 +56,10 @@ export ZSH=${LOCAL_SOFTWARE}/oh-my-zsh
 export ZSH_CUSTOM=${LOCAL_DATA}/oh-my-zsh
 export ZSH_CACHE_DIR=${LOCAL_CACHE}/oh-my-zsh
 
+# Poetry
+
+export POETRY_HOME=${LOCAL_SOFTWARE}/pypoetry
+
 # Python
 
 export PYTHONSTARTUP=${LOCAL_CONFIG}/python/pythonrc.py
