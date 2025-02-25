@@ -44,10 +44,6 @@ fi
 autoload -Uz compinit
 compinit
 
-# asdf Path
-
-path=(${ASDF_DATA_DIR}/shims $path)
-
 # Aliases
 
 safe_alias bat cat="bat --paging=never"
