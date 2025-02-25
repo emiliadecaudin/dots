@@ -82,13 +82,19 @@ export ZDOTDIR=${LOCAL_CONFIG}/zsh
 export ZHISTFILE=${HISTFILE}
 export ZSH_COMPDUMP=${LOCAL_CACHE}/zcompdump
 
-# Update Paths
+# Update Manual Paths
 
 export INFOPATH="${INFOPATH:-}:${LOCAL_INFO}"
 manpath+=(${LOCAL_MAN})
-path=(${HOME}/.local/dots/bin $path)
-path=(${LOCAL_BIN} $path)
-path=(${ASDF_DATA_DIR}/shims $path)
+
+# Update Executable and Function Paths (If Not Interactive)
+
+if [[ ! -o interactive ]]; then
+    path=(${HOME}/.local/dots/bin $path)
+    path=(${LOCAL_BIN} $path)
+    path=(${ASDF_DATA_DIR}/shims $path)
+    fpath=(${LOCAL_DATA}/functions $fpath)
+fi
 
 # Functions
 

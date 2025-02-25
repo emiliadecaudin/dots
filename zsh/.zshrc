@@ -35,14 +35,21 @@ if [[ $(printenv | grep -c "VSCODE_") -gt 0 ]]; then
     export IS_VSCODE=true
 fi
 
-if $IS_VSCODE; then
+if ${IS_VSCODE}; then
     export GIT_EDITOR="code --wait"
 fi
+
+# Update Paths
+
+path=(${HOME}/.local/dots/bin $path)
+path=(${LOCAL_BIN} $path)
+path=(${ASDF_DATA_DIR}/shims $path)
+fpath=(${LOCAL_DATA}/functions $fpath)
 
 # Reload Completions
 
 autoload -Uz compinit
-compinit
+compinit -d ${ZSH_COMPDUMP}
 
 # Aliases
 
