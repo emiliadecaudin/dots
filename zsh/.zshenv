@@ -22,6 +22,7 @@ mkdir -p ${LOCAL_LOGS}
 mkdir -p ${LOCAL_MAN}
 mkdir -p ${LOCAL_SOFTWARE}
 
+export XDG_BIN_HOME=${LOCAL_BIN}
 export XDG_CACHE_HOME=${LOCAL_CACHE}
 export XDG_CONFIG_HOME=${LOCAL_CONFIG}
 export XDG_DATA_HOME=${LOCAL_DATA}
