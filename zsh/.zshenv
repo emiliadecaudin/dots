@@ -38,6 +38,10 @@ export ASDF_DATA_DIR=${LOCAL_DATA}/asdf
 export AWS_CONFIG_FILE=${LOCAL_CONFIG}/aws/config
 export AWS_SHARED_CREDENTIALS_FILE=${LOCAL_CONFIG}/aws/credentials
 
+# git-get
+
+export GITGET_ROOT=~/Projects
+
 # Homebrew
 
 export HOMEBREW_BAT=1
