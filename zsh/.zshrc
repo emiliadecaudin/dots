@@ -26,6 +26,13 @@ safe_source ${LOCAL_CONFIG}/powerlevel10k/p10k.zsh
 export HISTFILE=${ZHISTFILE}
 unset ZHISTFILE
 
+# Update Paths
+
+path=(${HOME}/.local/dots/bin $path)
+path=(${LOCAL_BIN} $path)
+path=(${ASDF_DATA_DIR}/shims $path)
+fpath=(${LOCAL_DATA}/functions $fpath)
+
 # GIT_EDITOR
 
 export GIT_EDITOR=nano
@@ -37,13 +44,6 @@ fi
 if [[ -v VSCODE_INJECTION ]]; then
     export GIT_EDITOR="code --wait"
 fi
-
-# Update Paths
-
-path=(${HOME}/.local/dots/bin $path)
-path=(${LOCAL_BIN} $path)
-path=(${ASDF_DATA_DIR}/shims $path)
-fpath=(${LOCAL_DATA}/functions $fpath)
 
 # Reload Completions
 
