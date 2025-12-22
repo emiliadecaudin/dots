@@ -26,16 +26,15 @@ safe_source ${LOCAL_CONFIG}/powerlevel10k/p10k.zsh
 export HISTFILE=${ZHISTFILE}
 unset ZHISTFILE
 
-# VSCode Detection & GIT_EDITOR
+# GIT_EDITOR
 
-export IS_VSCODE=false
 export GIT_EDITOR=nano
 
-if [[ $(printenv | grep -c "VSCODE_") -gt 0 ]]; then
-    export IS_VSCODE=true
+if [[ $(command -v fresh) ]]; then
+    export GIT_EDITOR="fresh"
 fi
 
-if ${IS_VSCODE}; then
+if [[ -v VSCODE_INJECTION ]]; then
     export GIT_EDITOR="code --wait"
 fi
 

@@ -9,3 +9,6 @@
 	process = git-lfs filter-process
 [include]
 	path = host.gitconfig
+[gitget]
+    root = ~/Projects
+    skip-host = true
