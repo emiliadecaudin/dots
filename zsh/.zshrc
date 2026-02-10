@@ -13,7 +13,7 @@ zstyle :omz:plugins:iterm2 shell-integration yes
 # Oh My Zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins+=(colored-man-pages iterm2 zsh-syntax-highlighting)
+plugins+=(brew colored-man-pages iterm2 zsh-syntax-highlighting)
 ZSH_DISABLE_COMPFIX=true
 safe_source ${ZSH}/oh-my-zsh.sh
 
@@ -30,7 +30,8 @@ unset ZHISTFILE
 
 path=(${HOME}/.local/dots/bin $path)
 path=(${LOCAL_BIN} $path)
-path=(${ASDF_DATA_DIR}/shims $path)
+safe_path_prepend ${CARGO_HOME}/bin
+safe_path_prepend ${ASDF_DATA_DIR}/shims
 fpath=(${LOCAL_DATA}/functions $fpath)
 
 # GIT_EDITOR
@@ -54,6 +55,8 @@ compinit -d ${ZSH_COMPDUMP}
 
 safe_alias bat cat="bat --paging=never"
 safe_alias ffprobe ffprobe="ffprobe -hide_banner"
+safe_alias fresh fresh="fresh --no-upgrade-check"
+safe_alias fresh nano="fresh"
 safe_alias mycli mycli="mycli --defaults-file=${LOCAL_CONFIG}/mysql/my.cnf --myclirc ${LOCAL_CONFIG}/mycli/myclirc"
 safe_alias mysql mysql="mysql --defaults-file=${LOCAL_CONFIG}/mysql/my.cnf"
 safe_alias pip pip_wipe="pip freeze | xargs pip uninstall -y"

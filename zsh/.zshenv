@@ -41,7 +41,6 @@ export AWS_SHARED_CREDENTIALS_FILE=${LOCAL_CONFIG}/aws/credentials
 # Homebrew
 
 export HOMEBREW_BAT=1
-export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_ENV_HINTS=1
 
 # less
@@ -74,7 +73,9 @@ export PYTHONSTARTUP=${LOCAL_CONFIG}/python/pythonrc.py
 
 # Rust
 
+export CARGO_HOME=${LOCAL_SOFTWARE}/cargo
 export CARGO_INSTALL_ROOT=${HOME}/.local
+export RUSTUP_HOME=${LOCAL_SOFTWARE}/rustup
 
 # zsh
 
@@ -88,15 +89,6 @@ export ZSH_COMPDUMP=${LOCAL_CACHE}/zcompdump
 export INFOPATH="${INFOPATH:-}:${LOCAL_INFO}"
 manpath+=(${LOCAL_MAN})
 
-# Update Executable and Function Paths (If Not Interactive)
-
-if [[ ! -o interactive ]]; then
-    path=(${HOME}/.local/dots/bin $path)
-    path=(${LOCAL_BIN} $path)
-    path=(${ASDF_DATA_DIR}/shims $path)
-    fpath=(${LOCAL_DATA}/functions $fpath)
-fi
-
 # Functions
 
 function safe_source {
@@ -106,3 +98,17 @@ function safe_source {
 function safe_alias {
     command -v $1 &> /dev/null && alias $2 || true
 }
+
+function safe_path_prepend {
+    [ -d $1 ] && path=($1 $path)
+}
+
+# Update Executable and Function Paths (If Not Interactive)
+
+if [[ ! -o interactive ]]; then
+    path=(${HOME}/.local/dots/bin $path)
+    path=(${LOCAL_BIN} $path)
+    safe_path_prepend ${CARGO_HOME}/bin
+    safe_path_prepend ${ASDF_DATA_DIR}/shims
+    fpath=(${LOCAL_DATA}/functions $fpath)
+fi
