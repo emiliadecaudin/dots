@@ -19,7 +19,7 @@ safe_source ${ZSH}/oh-my-zsh.sh
 
 # Powerlevel10k
 
-safe_source ${LOCAL_CONFIG}/powerlevel10k/p10k.zsh
+safe_source ${ZDOTDIR}/p10k.zsh
 
 # zsh (Again)
 
@@ -57,7 +57,5 @@ safe_alias bat cat="bat --paging=never"
 safe_alias ffprobe ffprobe="ffprobe -hide_banner"
 safe_alias fresh fresh="fresh --no-upgrade-check"
 safe_alias fresh nano="fresh"
-safe_alias mycli mycli="mycli --defaults-file=${LOCAL_CONFIG}/mysql/my.cnf --myclirc ${LOCAL_CONFIG}/mycli/myclirc"
-safe_alias mysql mysql="mysql --defaults-file=${LOCAL_CONFIG}/mysql/my.cnf"
 safe_alias pip pip_wipe="pip freeze | xargs pip uninstall -y"
 safe_alias vim vim="vim -i ${LOCAL_HISTORY}/viminfo"

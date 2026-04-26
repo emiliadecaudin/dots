@@ -47,14 +47,9 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 export LESSHISTFILE=${LOCAL_HISTORY}/less.history
 
-# mycli
-
-export MYCLI_HISTFILE=${LOCAL_HISTORY}/mycli.history
-
 # MySQL
 
 export MYSQL_HISTFILE=${LOCAL_HISTORY}/mysql.history
-export MYSQL_TEST_LOGIN_FILE=${LOCAL_CONFIG}/mysql/mylogin.cnf
 
 # Oh My ZSH
 
@@ -69,7 +64,6 @@ export POETRY_HOME=${LOCAL_SOFTWARE}/pypoetry
 # Python
 
 export PYTHONHISTORY=${LOCAL_HISTORY}/python.history
-export PYTHONSTARTUP=${LOCAL_CONFIG}/python/pythonrc.py
 
 # Rust
 
@@ -103,10 +97,17 @@ function safe_path_prepend {
     [ -d $1 ] && path=($1 $path)
 }
 
+function update_dots {
+    echo "Pulling from upstream dots repository..."
+    git -C "${HOME}/.local/dots" pull
+
+    echo "Restarting zsh.."
+    exec zsh -l
+}
+
 # Update Executable and Function Paths (If Not Interactive)
 
 if [[ ! -o interactive ]]; then
-    path=(${HOME}/.local/dots/bin $path)
     path=(${LOCAL_BIN} $path)
     safe_path_prepend ${CARGO_HOME}/bin
     safe_path_prepend ${ASDF_DATA_DIR}/shims

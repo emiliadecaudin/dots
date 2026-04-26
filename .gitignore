@@ -2,10 +2,6 @@
 
 host.gitconfig
 
-# MySQL
-
-mylogin.cnf
-
 # zsh
 
 host.zprofile
