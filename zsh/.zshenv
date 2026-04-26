@@ -61,10 +61,6 @@ export ZSH=${LOCAL_SOFTWARE}/oh-my-zsh
 
 export POETRY_HOME=${LOCAL_SOFTWARE}/pypoetry
 
-# Python
-
-export PYTHONHISTFILE=${LOCAL_HISTORY}/python.history
-
 # Rust
 
 export CARGO_HOME=${LOCAL_SOFTWARE}/cargo
