@@ -63,7 +63,7 @@ export POETRY_HOME=${LOCAL_SOFTWARE}/pypoetry
 
 # Python
 
-export PYTHONHISTORY=${LOCAL_HISTORY}/python.history
+export PYTHONHISTFILE=${LOCAL_HISTORY}/python.history
 
 # Rust
 
