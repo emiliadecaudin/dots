@@ -34,16 +34,25 @@ safe_path_prepend ${CARGO_HOME}/bin
 safe_path_prepend ${ASDF_DATA_DIR}/shims
 fpath=(${LOCAL_DATA}/functions $fpath)
 
-# GIT_EDITOR
-
-export GIT_EDITOR=nano
-
-if [[ $(command -v fresh) ]]; then
-    export GIT_EDITOR="fresh"
-fi
+# Editors
 
 if [[ -v VSCODE_INJECTION ]]; then
+    alias fresh="code"
+    alias nano="code"
+
+    export EDITOR="code --wait"
     export GIT_EDITOR="code --wait"
+
+elif [[ $(command -v fresh) ]]; then
+    alias fresh="fresh --no-upgrade-check"
+    alias nano="fresh"
+
+    export EDITOR="fresh --no-upgrade-check"
+    export GIT_EDITOR="fresh --no-upgrade-check"
+
+else
+    export EDITOR="nano"
+    export GIT_EDITOR="nano"
 fi
 
 # Reload Completions
@@ -55,7 +64,5 @@ compinit -d ${ZSH_COMPDUMP}
 
 safe_alias bat cat="bat --paging=never"
 safe_alias ffprobe ffprobe="ffprobe -hide_banner"
-safe_alias fresh fresh="fresh --no-upgrade-check"
-safe_alias fresh nano="fresh"
 safe_alias pip pip_wipe="pip freeze | xargs pip uninstall -y"
 safe_alias vim vim="vim -i ${LOCAL_HISTORY}/viminfo"
