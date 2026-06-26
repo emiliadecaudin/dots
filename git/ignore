@@ -1,15 +1,10 @@
-# asdf
+# Claude
 
-.tool-versions
+**/.claude/settings.local.json
 
 # macOS
 
 .DS_Store
-
-# direnv
-
-.direnv/
-.envrc
 
 # VSCode
 
